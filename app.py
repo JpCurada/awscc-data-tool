@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import os
 
 st.set_page_config(
     page_title="AWSCC Data Tool",
@@ -8,8 +9,9 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-with open(r"static\styles.css") as css:
-    st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
+css_path = os.path.join(os.path.dirname(__file__), 'static', 'styles.css')
+with open(css_path) as css:
+    st.markdown(f'<style>{css.read()}</style>', unsafe_allow_html=True)
 
 
 st.title("Dashboard Tool")
