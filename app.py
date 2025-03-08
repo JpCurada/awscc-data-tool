@@ -8,7 +8,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-with open( "static\styles.css" ) as css:
+with open(r"static\styles.css") as css:
     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
 
 
