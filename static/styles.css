@@ -1,5 +1,83 @@
+/* Style for buttons with a specific data attribute */
+button[data-baseweb="tab"] {
+    font-size: 24px;
+    margin: 0;
+    width: 100%;
+}
+
+/* Import Poppins font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); 
 
+/* Apply Poppins font to all elements */
 body * {
     font-family: 'Poppins', sans-serif !important;
+}
+
+/* Hide hamburger menu */
+#MainMenu {visibility: hidden;}
+
+/* Hide sidebar completely */
+[data-testid="collapsedControl"] {
+    display: none;
+}
+
+/* Hide top right options menu */
+.stAppDeployButton {display: none;}
+
+/* Hide header */
+header {display: none;}
+
+/* Hide fullscreen button */
+[data-testid="stElementToolbar"] {display: none;}
+
+/* Hide 'Made with Streamlit' footer */
+footer {visibility: hidden;}
+
+/* Disable image expansion/zoom options */
+img {cursor: default !important;}
+.stImage > div > img {pointer-events: none;}
+
+/* Hide any other header buttons */
+header button {display: none;}
+
+/* Hide the page navigation pills if they exist */
+div[data-testid="stPageNavButtonContainer"] {display: none;}
+
+/* Hide sidebar navigation items */
+[data-testid="stSidebarNavItems"] {
+    display: none;
+}
+
+/* Style for horizontal rules inside specific containers */
+div[data-testid="stElementContainer"] hr {
+    margin: 5px;
+    margin-top: 0px;
+    width: auto;
+    border-top: 1px solid #d3d3d3;
+}
+
+/* Adjust the form button's bottom margin to fine-tune spacing */
+div[data-testid="stFormSubmitButton"] {
+    margin-bottom: 0px;
+}
+
+/* Adjust the visitor button's top margin to fine-tune spacing */
+div[data-testid="stButton"] {
+    margin-top: 0px;
+}
+
+/* Style for a right navigation container */
+.right-nav {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* Remove bottom margin for elements inside the right navigation container */
+.right-nav .element-container {
+    margin-bottom: 0 !important;
 }
