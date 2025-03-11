@@ -16,7 +16,8 @@ def editable_dataframe(df, editor_key):
         hide_index=False,
         key=editor_key,
         use_container_width=True,
-        disabled=False
+        disabled=False,
+        height=320
     )
     return edited_df
 
@@ -205,13 +206,13 @@ def render_members_tab():
         metrics = h.calculate_data_metrics(original_data)
         col1, col2, col3, col4 = st.columns(4)
         with col1:
-            st.metric(label="Total Rows", value=metrics['total_rows'])
+            st.metric(label="Total Rows", value=metrics['total_rows'], border=True)
         with col2:
-            st.metric(label="Unique Webmails", value=metrics['unique_webmails'])
+            st.metric(label="Unique Webmails", value=metrics['unique_webmails'], border=True)
         with col3:
-            st.metric(label="Duplicate Webmails", value=metrics['duplicate_webmails'])
+            st.metric(label="Duplicate Webmails", value=metrics['duplicate_webmails'], border=True)
         with col4:
-            st.metric(label="Non-Webmail Members", value=metrics['non_webmail_members'])
+            st.metric(label="Non-Webmail Members", value=metrics['non_webmail_members'], border=True)
 
         # Missing Values Chart
         missing_values_fig = viz.create_missing_values_chart(original_data)

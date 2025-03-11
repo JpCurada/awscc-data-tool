@@ -81,3 +81,30 @@ div[data-testid="stButton"] {
 .right-nav .element-container {
     margin-bottom: 0 !important;
 }
+
+/* Add custom styling for the data editor */
+.dvn-scroller.stDataFrameGlideDataEditor {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px #7B169E;
+    border: 1px solid #f3f3f3;
+}
+
+.dvn-scroller {scrollbar-gutter: stable both-edges;}
+
+[data-testid="stMetricLabel"] p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+[data-testid="stMetricValue"] {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+div[data-testid="stMetric"],
+div[data-testid="metric-container"] {
+    padding: 5% 5% 5% 10%;
+    border-radius: 10px;
+    border-left: 0.5rem solid #7B169E !important;
+    box-shadow: 0 4px 8px #892892;
+}

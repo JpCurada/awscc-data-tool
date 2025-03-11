@@ -21,7 +21,7 @@ def clean_column_names(df):
         pandas.DataFrame: The DataFrame with standardized column names.
     """
     
-    df.columns = df.columns.str.strip().str.lower().str.replace(' ', '_').str.replace('/', '_')
+    df.columns = df.columns.str.strip().str.lower().str.replace(' ', '_').str.replace('/', '')
     return df
 
 
